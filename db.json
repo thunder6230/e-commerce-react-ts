@@ -10,8 +10,7 @@
       ],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non enim mauris. Nullam dignissim venenatis tortor vel fermentum. Nam posuere viverra cursus. Vivamus iaculis id dui a dictum. Suspendisse vel consectetur diam, semper fringilla felis. Sed lacinia eleifend augue ac pellentesque. Donec semper dolor et ornare malesuada. Mauris lacinia felis sit amet eros aliquam ultricies. Proin quis diam venenatis, elementum orci et, lacinia lorem. In nisl augue, pulvinar sed lorem nec, vulputate sollicitudin leo.",
       "categories": 1,
-      "price": "1000",
-      "unit": "€",
+      "price": 100,
       "specifications": [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Sed hendrerit leo sed eros varius tincidunt.",
@@ -32,8 +31,7 @@
       "categories": [
         0, 2
       ],
-      "price":  "100",
-      "unit": "€",
+      "price":  100,
       "specifications": [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Sed hendrerit leo sed eros varius tincidunt.",
@@ -54,8 +52,7 @@
       "categories": [
         0, 2
       ],
-      "price":  "150",
-      "unit": "€",
+      "price":  150,
       "specifications": [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Sed hendrerit leo sed eros varius tincidunt.",
@@ -76,8 +73,7 @@
       "categories": [
         0, 2
       ],
-      "price":  "150",
-      "unit": "€",
+      "price":  150,
       "specifications": [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Sed hendrerit leo sed eros varius tincidunt.",
@@ -98,8 +94,7 @@
       "categories": [
         0, 3
       ],
-      "price":  "150",
-      "unit": "€",
+      "price":  150,
       "specifications": [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Sed hendrerit leo sed eros varius tincidunt.",
@@ -119,8 +114,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non enim mauris. Nullam dignissim venenatis tortor vel fermentum. Nam posuere viverra cursus. Vivamus iaculis id dui a dictum. Suspendisse vel consectetur diam, semper fringilla felis. Sed lacinia eleifend augue ac pellentesque. Donec semper dolor et ornare malesuada. Mauris lacinia felis sit amet eros aliquam ultricies. Proin quis diam venenatis, elementum orci et, lacinia lorem. In nisl augue, pulvinar sed lorem nec, vulputate sollicitudin leo.",
       "categories": [ 3
       ],
-      "price":  "150",
-      "unit": "€",
+      "price":  150,
       "specifications": [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Sed hendrerit leo sed eros varius tincidunt.",
@@ -139,10 +133,10 @@
       "id": 1,
       "name": "Mobile Phones"
     }, {
-      "id": 0,
+      "id": 2,
       "name": "Notebooks"
     }, {
-      "id": 0,
+      "id": 3,
       "name": "Monitors"
     }
   ]

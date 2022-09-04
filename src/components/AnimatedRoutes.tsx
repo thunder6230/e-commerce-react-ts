@@ -5,6 +5,9 @@ import {CartIndex} from "../pages/ShoppingCart/CartIndex";
 import {WishlistIndex} from "../pages/WishList/WishlistIndex";
 import { AnimatePresence } from "framer-motion";
 import {FC} from "react";
+import {CategoriesIndex} from "../pages/Categories/CategoriesIndex";
+import {CategoryIndex} from "../pages/Categories/id/CategoryIndex";
+import {ProductIndex} from "../pages/Product/ProductIndex";
 
 export const AnimatedRoutes:FC = () => {
 
@@ -16,6 +19,9 @@ export const AnimatedRoutes:FC = () => {
                 <Route path="/account" element={<AccountIndex />}></Route>
                 <Route path="/cart" element={<CartIndex />}></Route>
                 <Route path="/wishlist" element={<WishlistIndex />}></Route>
+                <Route path="/categories" element={<CategoriesIndex />}></Route>
+                <Route path="/categories/:id" element={<CategoryIndex />}></Route>
+                <Route path="/product/:id" element={<ProductIndex />}></Route>
             </Routes>
 
         </AnimatePresence>
