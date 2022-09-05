@@ -27,22 +27,16 @@ export const HeaderComponent = () => {
                                     opacity: 1,
                                     rotateX: 0,
                                     position: "absolute",
-                                    transition: {
-                                        duration: 0.5
-                                    },
                                     display: "block"
                                 } : {
                                     opacity: 0,
                                     rotateX: -30,
-                                    transition: {
-                                        duration: 0.5,
-                                        delay: 0.2,
-                                    },
                                     transitionEnd: {
                                         display: "none"
                                     }
 
                                 }}
+                                transition={{duration: 0.5}}
                                 className={"absolute top-16 flex flex-col bg-blue-100 h-fit"} style={{border: "1px solid white"}}
                             >
                                 <HeaderCategoriesComponent />
