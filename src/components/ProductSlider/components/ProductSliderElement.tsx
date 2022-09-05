@@ -3,6 +3,7 @@ import {IProduct} from "../../../GlobalTypes";
 import {FaCartPlus, FaHeart, FaPhotoVideo, FaSearchPlus} from "react-icons/all";
 import {motion} from "framer-motion"
 import {Link} from "react-router-dom";
+import {HoverMenuIconElement} from "./HoverMenuIconElement";
 
 interface Props {
     product: IProduct
@@ -37,25 +38,15 @@ export const ProductSliderElement:FC<Props> = ({product}) => {
                         opacity: showHoverMenu ? 1 : 0,
                         translateX: showHoverMenu ? 0 : "30px",
                         position: "absolute",
-                        transition: 0.5
+                        transition: {
+                            duration: 0.5
+                        }
                     }}
                     className={"bg-white bg-opacity-70 grid grid-rows-3 grid-flow-col h-full px-2 absolute right-0 top-0 gap-2 text-blue-700"}
                 >
-                        <li>
-                            <button  className={"p-2"} onClick={() => console.log("add to cart")}>
-                                <FaCartPlus className={"h-8 w-8 m-auto"}/>
-                            </button>
-                        </li>
-                        <li >
-                            <button className={"p-2"}  onClick={() => console.log("add to wishlist")}>
-                                <FaHeart className={"h-8 w-8 m-auto"}/>
-                            </button>
-                        </li>
-                        <li >
-                            <button className={"p-2"} onClick={() => console.log("open quick view")}>
-                                <FaSearchPlus className={"h-8 w-8 m-auto"}/>
-                            </button>
-                        </li>
+                        <HoverMenuIconElement callback={() => console.log("add to wishlist")} child={<FaHeart className={"h-8 w-8 m-auto"} />} />
+                        <HoverMenuIconElement callback={() => console.log("add to Cart")} child={<FaCartPlus className={"h-8 w-8 m-auto"} />} />
+                        <HoverMenuIconElement callback={() => console.log("open quickview")} child={<FaSearchPlus className={"h-8 w-8 m-auto"} />} />
                 </motion.ul>
 
 
