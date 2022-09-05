@@ -3,11 +3,11 @@
     {
       "id": "1",
       "name": "product 1",
-      "thumbnail": "/img/products/1_thumbnail.jpg",
+      "thumbnail": "/img/products/1_thumbnail",
       "imgUrls": [
-        "/img/products/1_1.jpg",
-        "/img/products/1_2.jpg",
-        "/img/products/1_3.jpg"
+        "/img/products/1_1",
+        "/img/products/1_2",
+        "/img/products/1_3"
       ],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non enim mauris. Nullam dignissim venenatis tortor vel fermentum. Nam posuere viverra cursus. Vivamus iaculis id dui a dictum. Suspendisse vel consectetur diam, semper fringilla felis. Sed lacinia eleifend augue ac pellentesque. Donec semper dolor et ornare malesuada. Mauris lacinia felis sit amet eros aliquam ultricies. Proin quis diam venenatis, elementum orci et, lacinia lorem. In nisl augue, pulvinar sed lorem nec, vulputate sollicitudin leo.",
       "categories": 1,
@@ -23,11 +23,11 @@
     },{
       "id": "2",
       "name": "product 2",
-      "thumbnail": "/img/products/2_thumbnail.jpg",
+      "thumbnail": "/img/products/2_thumbnail",
       "imgUrls": [
-        "/img/products/2_1.jpg",
-        "/img/products/2_2.jpg",
-        "/img/products/2_3.jpg"
+        "/img/products/2_1",
+        "/img/products/2_2",
+        "/img/products/2_3"
       ],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non enim mauris. Nullam dignissim venenatis tortor vel fermentum. Nam posuere viverra cursus. Vivamus iaculis id dui a dictum. Suspendisse vel consectetur diam, semper fringilla felis. Sed lacinia eleifend augue ac pellentesque. Donec semper dolor et ornare malesuada. Mauris lacinia felis sit amet eros aliquam ultricies. Proin quis diam venenatis, elementum orci et, lacinia lorem. In nisl augue, pulvinar sed lorem nec, vulputate sollicitudin leo.",
       "categories": [
@@ -45,11 +45,11 @@
     },{
       "id": "3",
       "name": "product 3",
-      "thumbnail": "/img/products/3_thumbnail.jpg",
+      "thumbnail": "/img/products/3_thumbnail",
       "imgUrls": [
-        "/img/products/3_1.jpg",
-        "/img/products/3_2.jpg",
-        "/img/products/3_3.jpg"
+        "/img/products/3_1",
+        "/img/products/3_2",
+        "/img/products/3_3"
       ],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non enim mauris. Nullam dignissim venenatis tortor vel fermentum. Nam posuere viverra cursus. Vivamus iaculis id dui a dictum. Suspendisse vel consectetur diam, semper fringilla felis. Sed lacinia eleifend augue ac pellentesque. Donec semper dolor et ornare malesuada. Mauris lacinia felis sit amet eros aliquam ultricies. Proin quis diam venenatis, elementum orci et, lacinia lorem. In nisl augue, pulvinar sed lorem nec, vulputate sollicitudin leo.",
       "categories": [
@@ -67,11 +67,11 @@
     },{
       "id":"4",
       "name": "product 4",
-      "thumbnail": "/img/products/4_thumbnail.jpg",
+      "thumbnail": "/img/products/4_thumbnail",
       "imgUrls": [
-        "/img/products/4_1.jpg",
-        "/img/products/4_2.jpg",
-        "/img/products/4_3.jpg"
+        "/img/products/4_1",
+        "/img/products/4_2",
+        "/img/products/4_3"
       ],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non enim mauris. Nullam dignissim venenatis tortor vel fermentum. Nam posuere viverra cursus. Vivamus iaculis id dui a dictum. Suspendisse vel consectetur diam, semper fringilla felis. Sed lacinia eleifend augue ac pellentesque. Donec semper dolor et ornare malesuada. Mauris lacinia felis sit amet eros aliquam ultricies. Proin quis diam venenatis, elementum orci et, lacinia lorem. In nisl augue, pulvinar sed lorem nec, vulputate sollicitudin leo.",
       "categories": [
@@ -89,11 +89,11 @@
     },{
       "id": "5",
       "name": "product 5",
-      "thumbnail": "/img/products/5_thumbnail.jpg",
+      "thumbnail": "/img/products/5_thumbnail",
       "imgUrls": [
-        "/img/products/5_1.jpg",
-        "/img/products/5_2.jpg",
-        "/img/products/5_3.jpg"
+        "/img/products/5_1",
+        "/img/products/5_2",
+        "/img/products/5_3"
       ],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non enim mauris. Nullam dignissim venenatis tortor vel fermentum. Nam posuere viverra cursus. Vivamus iaculis id dui a dictum. Suspendisse vel consectetur diam, semper fringilla felis. Sed lacinia eleifend augue ac pellentesque. Donec semper dolor et ornare malesuada. Mauris lacinia felis sit amet eros aliquam ultricies. Proin quis diam venenatis, elementum orci et, lacinia lorem. In nisl augue, pulvinar sed lorem nec, vulputate sollicitudin leo.",
       "categories": [
@@ -111,11 +111,11 @@
     },{
       "id": "6",
       "name": "product 6",
-      "thumbnail": "/img/products/6_thumbnail.jpg",
+      "thumbnail": "/img/products/6_thumbnail",
       "imgUrls": [
-        "/img/products/6_1.jpg",
-        "/img/products/6_2.jpg",
-        "/img/products/6_3.jpg"
+        "/img/products/6_1",
+        "/img/products/6_2",
+        "/img/products/6_3"
       ],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non enim mauris. Nullam dignissim venenatis tortor vel fermentum. Nam posuere viverra cursus. Vivamus iaculis id dui a dictum. Suspendisse vel consectetur diam, semper fringilla felis. Sed lacinia eleifend augue ac pellentesque. Donec semper dolor et ornare malesuada. Mauris lacinia felis sit amet eros aliquam ultricies. Proin quis diam venenatis, elementum orci et, lacinia lorem. In nisl augue, pulvinar sed lorem nec, vulputate sollicitudin leo.",
       "categories": [ 3

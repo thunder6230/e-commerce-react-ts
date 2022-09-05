@@ -1,6 +1,7 @@
 import {IImg} from "../../GlobalTypes";
 import {FC} from "react";
 import {Link} from "react-router-dom";
+import {formatImage} from "../../utilities/utilities";
 
 interface Props {
     img: IImg
@@ -8,7 +9,7 @@ interface Props {
 export const BannerElement:FC<Props> = ({img}) => {
     return (
         <div className={"relative w-full"}>
-            <img src={img.imgUrl} alt={img.alt} key={img.imgUrl}  style={{maxHeight: "500px",
+            <img src={formatImage(img.imgUrl)} alt={img.alt} key={img.imgUrl}  style={{maxHeight: "500px",
                 width: "100%", objectFit: "cover" }}
             />
             <div className={"absolute w-full h-full top-0"}>
