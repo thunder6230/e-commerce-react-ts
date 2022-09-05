@@ -4,6 +4,7 @@
       "id": "1",
       "name": "product 1",
       "thumbnail": "/img/products/1_thumbnail",
+      "brand": "Brand",
       "imgUrls": [
         "/img/products/1_1",
         "/img/products/1_2",
@@ -24,6 +25,7 @@
       "id": "2",
       "name": "product 2",
       "thumbnail": "/img/products/2_thumbnail",
+      "brand":  "Example Brand",
       "imgUrls": [
         "/img/products/2_1",
         "/img/products/2_2",
@@ -44,8 +46,14 @@
       ]
     },{
       "id": "3",
-      "name": "product 3",
+      "name": "Curved Monitor",
       "thumbnail": "/img/products/3_thumbnail",
+      "brand":  "Samsung",
+      "sizes": {
+        "selection": ["24", "27", "29", "32"],
+        "unit": "col"
+      },
+      "colors": ["black", "silver"],
       "imgUrls": [
         "/img/products/3_1",
         "/img/products/3_2",
@@ -57,17 +65,31 @@
       ],
       "price":  150,
       "specifications": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Sed hendrerit leo sed eros varius tincidunt.",
-        "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
-        "Donec eu tellus sed augue accumsan auctor ut eget risus.",
-        "Phasellus id est a metus tempor dictum non at orci.",
-        "Nullam congue ipsum eu sem tristique eleifend."
+        {
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "title": "title"},
+        {
+          "content": "Sed hendrerit leo sed eros varius tincidunt.",
+          "title": "title"},
+        {
+          "content": "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
+          "title": "title"},
+        {
+          "content": "Donec eu tellus sed augue accumsan auctor ut eget risus.",
+          "title": "title"},
+        {
+          "content": "Phasellus id est a metus tempor dictum non at orci.",
+          "title": "title"},
+        {
+          "content": "Nullam congue ipsum eu sem tristique eleifend.",
+          "title": "title"
+        }
       ]
     },{
       "id":"4",
       "name": "product 4",
       "thumbnail": "/img/products/4_thumbnail",
+      "brand":  "Example Brand",
       "imgUrls": [
         "/img/products/4_1",
         "/img/products/4_2",
@@ -90,6 +112,7 @@
       "id": "5",
       "name": "product 5",
       "thumbnail": "/img/products/5_thumbnail",
+      "brand":  "Example Brand",
       "imgUrls": [
         "/img/products/5_1",
         "/img/products/5_2",
@@ -112,6 +135,7 @@
       "id": "6",
       "name": "product 6",
       "thumbnail": "/img/products/6_thumbnail",
+      "brand":  "Example Brand",
       "imgUrls": [
         "/img/products/6_1",
         "/img/products/6_2",

@@ -9,7 +9,7 @@ interface Props {
 export const BannerElement:FC<Props> = ({img}) => {
     return (
         <div className={"relative w-full"}>
-            <img src={formatImage(img.imgUrl)} alt={img.alt} key={img.imgUrl}  style={{maxHeight: "500px",
+            <img src={formatImage(img.imgUrl)} alt={img.alt} key={img.imgUrl} loading={"eager"} style={{maxHeight: "500px",
                 width: "100%", objectFit: "cover" }}
             />
             <div className={"absolute w-full h-full top-0"}>

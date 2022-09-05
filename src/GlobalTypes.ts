@@ -11,15 +11,20 @@ export interface IBannerButton {
 }
 export interface IProduct {
     id: string
-    name?: string
+    name: string
     imgUrls?: string[]
     description?: string
-    categories?: number[],
-    price?: number,
-    unit?: string,
-    specifications?: string[]
-    brand?: string
+    categories: number[],
+    price: number,
+    specifications?: { title:string, content: string }[]
+    brand: string
     thumbnail?: string
+    seller?: string
+    colors?: string[]
+    sizes?: {
+        selection: string[],
+        unit: string
+    },
 }
 export interface IUser{
 
