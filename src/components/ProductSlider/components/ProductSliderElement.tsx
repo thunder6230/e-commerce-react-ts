@@ -4,20 +4,14 @@ import {FaCartPlus, FaHeart, FaPhotoVideo, FaSearchPlus} from "react-icons/all";
 import {motion} from "framer-motion"
 import {Link} from "react-router-dom";
 import {HoverMenuIconElement} from "./HoverMenuIconElement";
+import {formatImage, formatPrice} from "../../../utilities/utilities";
 
 interface Props {
     product: IProduct
 }
 
 export const ProductSliderElement:FC<Props> = ({product}) => {
-    const currency = import.meta.env.VITE_CURRENCY
-    const formatPrice = (price: number | string) => {
-        const formattedPrice = price.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        })
-        return `${formattedPrice} ${currency}`
-    }
+
     const [showHoverMenu, setShowHoverMenu] = useState<boolean>(false)
 
     return (
@@ -28,10 +22,11 @@ export const ProductSliderElement:FC<Props> = ({product}) => {
         >
             <div className={"p-2 h-full max-h-52 relative"}>
                 <Link to={`/product/${product.id}`}>{
-                    product.imgUrls && product.imgUrls.length > 0
-                        ? <img src={product.imgUrls[0]}
-                               style={{width: "100%", height: "100%", objectFit: "contain"}} alt={product.name}/>
-                        : <FaPhotoVideo/>
+                    product.thumbnail ?
+                        <img src={formatImage(product.thumbnail)}
+                               style={{width: "100%", height: "100%", objectFit: "contain"}}
+                             alt={product.name} title={product.name}/>
+                        : <FaPhotoVideo title={product.name}/>
                 }</Link>
                 <motion.ul
                     animate={{

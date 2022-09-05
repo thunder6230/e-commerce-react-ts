@@ -9,7 +9,7 @@ export const HomeIndex = () => {
     const {topProducts, getTopProducts} = useContext(ProductsContext)
     const images:IImg[] = [
         {
-            imgUrl: "/img/banner.jpg",
+            imgUrl: "/img/banner",
             alt: "banner",
             button:{
                 link: "/wishlist",

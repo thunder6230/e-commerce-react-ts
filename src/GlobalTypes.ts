@@ -19,6 +19,7 @@ export interface IProduct {
     unit?: string,
     specifications?: string[]
     brand?: string
+    thumbnail?: string
 }
 export interface IUser{
 
