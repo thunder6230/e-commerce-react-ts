@@ -18,6 +18,7 @@ export interface IProduct {
     price?: number,
     unit?: string,
     specifications?: string[]
+    brand?: string
 }
 export interface IUser{
 
