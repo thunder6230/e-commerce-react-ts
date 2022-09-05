@@ -3,6 +3,7 @@
     {
       "id": "1",
       "name": "product 1",
+      "thumbnail": "/img/products/1_thumbnail.jpg",
       "imgUrls": [
         "/img/products/1_1.jpg",
         "/img/products/1_2.jpg",
@@ -22,6 +23,7 @@
     },{
       "id": "2",
       "name": "product 2",
+      "thumbnail": "/img/products/2_thumbnail.jpg",
       "imgUrls": [
         "/img/products/2_1.jpg",
         "/img/products/2_2.jpg",
@@ -43,6 +45,7 @@
     },{
       "id": "3",
       "name": "product 3",
+      "thumbnail": "/img/products/3_thumbnail.jpg",
       "imgUrls": [
         "/img/products/3_1.jpg",
         "/img/products/3_2.jpg",
@@ -64,6 +67,7 @@
     },{
       "id":"4",
       "name": "product 4",
+      "thumbnail": "/img/products/4_thumbnail.jpg",
       "imgUrls": [
         "/img/products/4_1.jpg",
         "/img/products/4_2.jpg",
@@ -85,6 +89,7 @@
     },{
       "id": "5",
       "name": "product 5",
+      "thumbnail": "/img/products/5_thumbnail.jpg",
       "imgUrls": [
         "/img/products/5_1.jpg",
         "/img/products/5_2.jpg",
@@ -106,6 +111,7 @@
     },{
       "id": "6",
       "name": "product 6",
+      "thumbnail": "/img/products/6_thumbnail.jpg",
       "imgUrls": [
         "/img/products/6_1.jpg",
         "/img/products/6_2.jpg",
@@ -129,13 +135,15 @@
     {
       "id": 0,
       "name": "Top Products"
-    }, {
+    },
+    {
       "id": 1,
-      "name": "Mobile Phones"
-    }, {
+      "name": "Mobile Phones"    },
+    {
       "id": 2,
       "name": "Notebooks"
-    }, {
+    },
+    {
       "id": 3,
       "name": "Monitors"
     }

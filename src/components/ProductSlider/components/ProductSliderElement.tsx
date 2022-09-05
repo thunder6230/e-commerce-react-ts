@@ -28,10 +28,11 @@ export const ProductSliderElement:FC<Props> = ({product}) => {
         >
             <div className={"p-2 h-full max-h-52 relative"}>
                 <Link to={`/product/${product.id}`}>{
-                    product.imgUrls && product.imgUrls.length > 0
-                        ? <img src={product.imgUrls[0]}
-                               style={{width: "100%", height: "100%", objectFit: "contain"}} alt={product.name}/>
-                        : <FaPhotoVideo/>
+                    product.thumbnail ?
+                        <img src={product.thumbnail}
+                               style={{width: "100%", height: "100%", objectFit: "contain"}}
+                             alt={product.name} title={product.name}/>
+                        : <FaPhotoVideo title={product.name}/>
                 }</Link>
                 <motion.ul
                     animate={{
