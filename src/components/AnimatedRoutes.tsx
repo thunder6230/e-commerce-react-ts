@@ -8,6 +8,7 @@ import {FC} from "react";
 import {CategoriesIndex} from "../pages/Categories/CategoriesIndex";
 import {CategoryIndex} from "../pages/Categories/id/CategoryIndex";
 import {ProductIndex} from "../pages/Product/ProductIndex";
+import {SearchIndex} from "../pages/Search/SearchIndex";
 
 export const AnimatedRoutes:FC = () => {
 
@@ -22,6 +23,8 @@ export const AnimatedRoutes:FC = () => {
                 <Route path="/categories" element={<CategoriesIndex />}></Route>
                 <Route path="/categories/:id" element={<CategoryIndex />}></Route>
                 <Route path="/product/:id" element={<ProductIndex />}></Route>
+                <Route path="/search/name/:name" element={<SearchIndex />}></Route>
+                <Route path="/search/brand/:brand" element={<SearchIndex />}></Route>
             </Routes>
 
         </AnimatePresence>

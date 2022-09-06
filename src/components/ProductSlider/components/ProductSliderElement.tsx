@@ -16,7 +16,7 @@ export const ProductSliderElement:FC<Props> = ({product}) => {
 
     return (
         <div
-            className={"rounded mx-auto w-3/12"}
+            className={"rounded p-3 h-full"}
             onMouseEnter={() => setShowHoverMenu(true)}
             onMouseLeave={() => setShowHoverMenu(false)}
         >
@@ -24,6 +24,7 @@ export const ProductSliderElement:FC<Props> = ({product}) => {
                 <Link to={`/product/${product.id}`}>{
                     product.thumbnail ?
                         <img src={formatImage(product.thumbnail)}
+                             loading={"lazy"}
                                style={{width: "100%", height: "100%", objectFit: "contain"}}
                              alt={product.name} title={product.name}/>
                         : <FaPhotoVideo title={product.name}/>
