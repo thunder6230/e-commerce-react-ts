@@ -25,7 +25,6 @@ export const AnimatedRoutes:FC = () => {
                 <Route path="/product/:id" element={<ProductIndex />}></Route>
                 <Route path="/search/name/:name" element={<SearchIndex />}></Route>
                 <Route path="/search/brand/:brand" element={<SearchIndex />}></Route>
-                <Route path="/search/id/:id" element={<SearchIndex />}></Route>
             </Routes>
 
         </AnimatePresence>

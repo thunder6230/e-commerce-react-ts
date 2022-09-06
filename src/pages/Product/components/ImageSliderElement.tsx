@@ -9,7 +9,7 @@ export const ImageSliderElement:FC<Props> = ({imgUrls}) => {
     return (
         <div className={""}>
             {
-                    <Carousel gap={10} loop rows={1} autoplay  showDots scrollSnap>
+                    <Carousel gap={10} loop rows={1} autoplay={5000}  showDots scrollSnap>
                         {
                             imgUrls.map((url,index) =>
                                 <Carousel.Item key={url}>

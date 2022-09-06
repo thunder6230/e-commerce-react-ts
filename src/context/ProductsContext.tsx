@@ -1,5 +1,5 @@
 import {createContext, FC, useEffect, useMemo, useState} from "react";
-import {ICategory, IProduct} from "../GlobalTypes";
+import {ICategory, IProduct, ISearchParams} from "../GlobalTypes";
 import axios from "axios";
 
 interface ProductsContext {
@@ -11,7 +11,7 @@ interface ProductsContext {
     seller: string
     getTopProducts: () => void
     getProduct: (id: string) => void
-    searchProducts: (searchTerm: string) => void
+    searchProducts: (searchTerm: ISearchParams) => void
     getCategories: () => void
     getRelatedProducts: (categoryIds: number[]) => void
 }
@@ -42,8 +42,16 @@ export const ProductsContextProvider: FC<Props> = ({children}) => {
         setOpenedProduct(response.data)
     }
 
-    const searchProducts = async (searchParams: string) => {
-        const response = await axios.get("/products", {params: searchParams})
+    const searchProducts = async (searchParams: ISearchParams) => {
+        interface ISearchRequestParams {
+            name_like?: string,
+            brand_like?: string
+        }
+        const {name, brand} = searchParams
+        let params:ISearchRequestParams={}
+        if(name) params = {name_like:name}
+        if(brand) params = {brand_like:brand}
+        const response = await axios.get("/products", {params:params })
         if (response.status != 200) return //errorHandling
         setFoundProducts(response.data)
     }
@@ -57,7 +65,6 @@ export const ProductsContextProvider: FC<Props> = ({children}) => {
         categoryIds.forEach(id => {
             if (id !== 0) return categoryId = id
         })
-        console.log(categoryId)
         const response = await axios.get(`/products?categories_like=${categoryId}`)
         if (response.status !== 200) return console.log("error")
         setRelatedProducts(response.data)
@@ -84,7 +91,7 @@ export const ProductsContextProvider: FC<Props> = ({children}) => {
         categories,
         relatedProducts,
         getRelatedProducts,
-        seller
+        seller,
     }}>
         {children}
     </ProductsContext.Provider>

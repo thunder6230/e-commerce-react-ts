@@ -16,7 +16,7 @@ export const ProductSliderElement:FC<Props> = ({product}) => {
 
     return (
         <div
-            className={"rounded mx-auto w-3/12"}
+            className={"rounded p-3 h-full"}
             onMouseEnter={() => setShowHoverMenu(true)}
             onMouseLeave={() => setShowHoverMenu(false)}
         >

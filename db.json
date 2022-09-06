@@ -11,15 +11,28 @@
         "/img/products/1_3"
       ],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non enim mauris. Nullam dignissim venenatis tortor vel fermentum. Nam posuere viverra cursus. Vivamus iaculis id dui a dictum. Suspendisse vel consectetur diam, semper fringilla felis. Sed lacinia eleifend augue ac pellentesque. Donec semper dolor et ornare malesuada. Mauris lacinia felis sit amet eros aliquam ultricies. Proin quis diam venenatis, elementum orci et, lacinia lorem. In nisl augue, pulvinar sed lorem nec, vulputate sollicitudin leo.",
-      "categories": 1,
+      "categories": [1],
       "price": 100,
-      "specifications": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Sed hendrerit leo sed eros varius tincidunt.",
-        "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
-        "Donec eu tellus sed augue accumsan auctor ut eget risus.",
-        "Phasellus id est a metus tempor dictum non at orci.",
-        "Nullam congue ipsum eu sem tristique eleifend."
+     "specifications": [
+        {
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "title": "title"},
+        {
+          "content": "Sed hendrerit leo sed eros varius tincidunt.",
+          "title": "title"},
+        {
+          "content": "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
+          "title": "title"},
+        {
+          "content": "Donec eu tellus sed augue accumsan auctor ut eget risus.",
+          "title": "title"},
+        {
+          "content": "Phasellus id est a metus tempor dictum non at orci.",
+          "title": "title"},
+        {
+          "content": "Nullam congue ipsum eu sem tristique eleifend.",
+          "title": "title"
+        }
       ]
     },{
       "id": "2",
@@ -36,13 +49,26 @@
         0, 2
       ],
       "price":  100,
-      "specifications": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Sed hendrerit leo sed eros varius tincidunt.",
-        "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
-        "Donec eu tellus sed augue accumsan auctor ut eget risus.",
-        "Phasellus id est a metus tempor dictum non at orci.",
-        "Nullam congue ipsum eu sem tristique eleifend."
+     "specifications": [
+        {
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "title": "title"},
+        {
+          "content": "Sed hendrerit leo sed eros varius tincidunt.",
+          "title": "title"},
+        {
+          "content": "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
+          "title": "title"},
+        {
+          "content": "Donec eu tellus sed augue accumsan auctor ut eget risus.",
+          "title": "title"},
+        {
+          "content": "Phasellus id est a metus tempor dictum non at orci.",
+          "title": "title"},
+        {
+          "content": "Nullam congue ipsum eu sem tristique eleifend.",
+          "title": "title"
+        }
       ]
     },{
       "id": "3",
@@ -100,13 +126,26 @@
         0, 2
       ],
       "price":  150,
-      "specifications": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Sed hendrerit leo sed eros varius tincidunt.",
-        "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
-        "Donec eu tellus sed augue accumsan auctor ut eget risus.",
-        "Phasellus id est a metus tempor dictum non at orci.",
-        "Nullam congue ipsum eu sem tristique eleifend."
+     "specifications": [
+        {
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "title": "title"},
+        {
+          "content": "Sed hendrerit leo sed eros varius tincidunt.",
+          "title": "title"},
+        {
+          "content": "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
+          "title": "title"},
+        {
+          "content": "Donec eu tellus sed augue accumsan auctor ut eget risus.",
+          "title": "title"},
+        {
+          "content": "Phasellus id est a metus tempor dictum non at orci.",
+          "title": "title"},
+        {
+          "content": "Nullam congue ipsum eu sem tristique eleifend.",
+          "title": "title"
+        }
       ]
     },{
       "id": "5",
@@ -123,13 +162,26 @@
         0, 3
       ],
       "price":  150,
-      "specifications": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Sed hendrerit leo sed eros varius tincidunt.",
-        "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
-        "Donec eu tellus sed augue accumsan auctor ut eget risus.",
-        "Phasellus id est a metus tempor dictum non at orci.",
-        "Nullam congue ipsum eu sem tristique eleifend."
+     "specifications": [
+        {
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "title": "title"},
+        {
+          "content": "Sed hendrerit leo sed eros varius tincidunt.",
+          "title": "title"},
+        {
+          "content": "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
+          "title": "title"},
+        {
+          "content": "Donec eu tellus sed augue accumsan auctor ut eget risus.",
+          "title": "title"},
+        {
+          "content": "Phasellus id est a metus tempor dictum non at orci.",
+          "title": "title"},
+        {
+          "content": "Nullam congue ipsum eu sem tristique eleifend.",
+          "title": "title"
+        }
       ]
     },{
       "id": "6",
@@ -145,13 +197,26 @@
       "categories": [ 3
       ],
       "price":  150,
-      "specifications": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Sed hendrerit leo sed eros varius tincidunt.",
-        "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
-        "Donec eu tellus sed augue accumsan auctor ut eget risus.",
-        "Phasellus id est a metus tempor dictum non at orci.",
-        "Nullam congue ipsum eu sem tristique eleifend."
+     "specifications": [
+        {
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "title": "title"},
+        {
+          "content": "Sed hendrerit leo sed eros varius tincidunt.",
+          "title": "title"},
+        {
+          "content": "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
+          "title": "title"},
+        {
+          "content": "Donec eu tellus sed augue accumsan auctor ut eget risus.",
+          "title": "title"},
+        {
+          "content": "Phasellus id est a metus tempor dictum non at orci.",
+          "title": "title"},
+        {
+          "content": "Nullam congue ipsum eu sem tristique eleifend.",
+          "title": "title"
+        }
       ]
     }
   ],
@@ -170,6 +235,35 @@
     {
       "id": 3,
       "name": "Monitors"
+    }
+  ],
+  "users": [
+    {
+      "id": 0,
+      "email": "email@email.com",
+      "password": "password",
+      "firstName": "John"
+    }
+  ],
+  "orders": [
+    {
+      "id": 0,
+      "userId": 0,
+      "items": ["1", "3"]
+    }
+  ],
+  "wishlists": [
+    {
+      "id": 0,
+      "userId": 0,
+      "items": ["1", "2"]
+    }
+  ],
+  "carts": [
+    {
+      "id": 0,
+      "userId": 0,
+      "items": ["1", "2"]
     }
   ]
 }

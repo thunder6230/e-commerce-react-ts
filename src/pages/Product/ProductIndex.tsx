@@ -1,4 +1,4 @@
-import {Link, useNavigate, useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {motion} from "framer-motion";
 import {useContext, useEffect, useState} from "react";
 import {ProductsContext} from "../../context/ProductsContext";
@@ -10,18 +10,15 @@ import {SHOP_SETTINGS} from "../../utilities/Config";
 import {CounterComponent} from "../../components/Utilities/CounterComponent";
 import {ProductToolsComponent} from "./components/ProductToolsComponent";
 import {ProductDetailsComponent} from "./components/ProductDetailsComponent";
+import {CategoryLinksComponent} from "./components/CategoryLinksComponent";
 
 export const ProductIndex = () => {
     const params = useParams()
-    const navigate = useNavigate()
     const {relatedProducts, getProduct, openedProduct} = useContext(ProductsContext)
     const [count, setCount] = useState<number>(1)
     const dropdownClass = "shadow-xl px-2 py-2 rounded focus:outline-none transition focus:border-blue-700 hover:border-blue-700 border-1 border-blue-300"
-    const handleSearchBrand = (brand: string) => {
-        navigate(`/search/brand/${brand}`)
-    }
+
     useEffect(() => { getProduct && getProduct(params.id!)}, [])
-    console.log(params)
     return (
        <motion.div
             initial={{opacity: 0, translateX: -30}}
@@ -41,7 +38,7 @@ export const ProductIndex = () => {
                         <div style={{maxWidth:400}}>
 
                             {SHOP_SETTINGS.SHOW_SELLER  && <h3 className={"cursor-pointer font-semibold mb-4 hover:underline transition pl-1"} onClick={() => console.log(`show all products from ${SHOP_SETTINGS.SHOP_NAME}`)}>other products from {SHOP_SETTINGS.SHOP_NAME}</h3>}
-                            {/* TODO Reviews Element*/}
+                             {/*TODO Reviews Element*/}
                             <h2 className={"text-4xl font-semibold"}>{formatPrice(openedProduct.price)}</h2>
                             <p className={"my-2 opacity-80 text-sm"}>{SHOP_SETTINGS.PRICE_ADDITIONAL_TEXT} <Link to={"/GTC"} className={"font-semibold hover:underline"}>{SHOP_SETTINGS.PRICE_ADDITIONAL_LINK_TEXT}</Link></p>
                             {/*Sizes and Colors TODO Custom Dropdown Component*/}
@@ -73,6 +70,12 @@ export const ProductIndex = () => {
                             }
                             <CounterComponent setCount={setCount} count={count} />
                             <ProductToolsComponent />
+                            {
+                                openedProduct.categories &&
+                                <CategoryLinksComponent categoriesArr={openedProduct.categories} brand={openedProduct.brand}/>
+
+
+                            }
                         </div>
                         {/*{openedProduct.brand !== "" && <h3 className={"my-2 cursor-pointer font-semibold"} onClick={() => handleSearchBrand(openedProduct.brand)}>{openedProduct.brand}</h3>}*/}
                     </div>

@@ -29,11 +29,12 @@ export interface IProduct {
 export interface IUser{
 
 }
-export interface ISearchparams{
+export interface ISearchParams {
     name?: string,
-    category: number
+    id?: number,
+    brand?: string
 }
 export interface ICategory{
-    name?: string,
+    name: string,
     id: number
 }

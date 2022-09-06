@@ -19,7 +19,11 @@ export const ProductDetailsComponent:FC<Props> = ({product}) => {
                 <div className={"my-8"}>
                     <h2 className={"font-semibold text-2xl mb-4"}>Specifications</h2>
                     <div>
-                        {product.specifications.map(element => <div className={"flex justify-between"}><label>{element.title}</label><p>{element.content}</p></div> )}
+                        {product.specifications.map(element =>
+                            <div className={"flex"}>
+                                <label className={"font-semibold mr-2"}>{element.title}:</label>
+                                <p>{element.content}</p>
+                            </div> )}
 
                     </div>
                 </div>
