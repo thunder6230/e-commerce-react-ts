@@ -17,7 +17,7 @@ export const ProductSliderElement:FC<Props> = ({product}) => {
     const {addToWishList, addToCart} = useContext(AccountContext)
     const navigate = useNavigate()
     const handleAddToCart = () => {
-        if(product.sizes && product.colors) return navigate(`/products/${product.id}`)
+        if(product.sizes && product.colors) return navigate(`/product/${product.id}`)
         addToCart && addToCart({id:product.id,  count: 1})
     }
     return (
