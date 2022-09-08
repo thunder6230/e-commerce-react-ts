@@ -1,14 +1,16 @@
-export interface IImg{
+export interface IImg {
     imgUrl: string
     button?: IBannerButton
     title?: string
     subtitle?: string
     alt: string
 }
+
 export interface IBannerButton {
-    link:string
+    link: string
     text: string
 }
+
 export interface IProduct {
     id: string
     name: string
@@ -16,7 +18,7 @@ export interface IProduct {
     description?: string
     categories: number[],
     price: number,
-    specifications?: { title:string, content: string }[]
+    specifications?: { title: string, content: string }[]
     brand: string
     thumbnail?: string
     seller?: string
@@ -26,15 +28,34 @@ export interface IProduct {
         unit: string
     },
 }
-export interface IUser{
+
+export interface IUser {
 
 }
+
 export interface ISearchParams {
     name?: string,
     id?: number,
     brand?: string
 }
-export interface ICategory{
+
+export interface ICategory {
     name: string,
     id: number
+}
+
+export interface ICartItem {
+    id?: number,
+    product: IProduct,
+    color?: string,
+    size?: string,
+    count: number,
+
+}
+
+export interface CartParams {
+    id: string,
+    count: number,
+    color?: string,
+    size?: string
 }

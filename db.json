@@ -13,25 +13,25 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non enim mauris. Nullam dignissim venenatis tortor vel fermentum. Nam posuere viverra cursus. Vivamus iaculis id dui a dictum. Suspendisse vel consectetur diam, semper fringilla felis. Sed lacinia eleifend augue ac pellentesque. Donec semper dolor et ornare malesuada. Mauris lacinia felis sit amet eros aliquam ultricies. Proin quis diam venenatis, elementum orci et, lacinia lorem. In nisl augue, pulvinar sed lorem nec, vulputate sollicitudin leo.",
       "categories": [1],
       "price": 100,
-     "specifications": [
+      "specifications": [
         {
           "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "title": "title"},
+          "title": "title 1"},
         {
           "content": "Sed hendrerit leo sed eros varius tincidunt.",
-          "title": "title"},
+          "title": "title 2"},
         {
           "content": "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
-          "title": "title"},
+          "title": "title 3"},
         {
           "content": "Donec eu tellus sed augue accumsan auctor ut eget risus.",
-          "title": "title"},
+          "title": "title 4"},
         {
           "content": "Phasellus id est a metus tempor dictum non at orci.",
-          "title": "title"},
+          "title": "title 5"},
         {
           "content": "Nullam congue ipsum eu sem tristique eleifend.",
-          "title": "title"
+          "title": "title 6"
         }
       ]
     },{
@@ -49,25 +49,25 @@
         0, 2
       ],
       "price":  100,
-     "specifications": [
+      "specifications": [
         {
           "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "title": "title"},
+          "title": "title 1"},
         {
           "content": "Sed hendrerit leo sed eros varius tincidunt.",
-          "title": "title"},
+          "title": "title 2"},
         {
           "content": "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
-          "title": "title"},
+          "title": "title 3"},
         {
           "content": "Donec eu tellus sed augue accumsan auctor ut eget risus.",
-          "title": "title"},
+          "title": "title 4"},
         {
           "content": "Phasellus id est a metus tempor dictum non at orci.",
-          "title": "title"},
+          "title": "title 5"},
         {
           "content": "Nullam congue ipsum eu sem tristique eleifend.",
-          "title": "title"
+          "title": "title 6"
         }
       ]
     },{
@@ -93,22 +93,22 @@
       "specifications": [
         {
           "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "title": "title"},
+          "title": "title 1"},
         {
           "content": "Sed hendrerit leo sed eros varius tincidunt.",
-          "title": "title"},
+          "title": "title 2"},
         {
           "content": "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
-          "title": "title"},
+          "title": "title 3"},
         {
           "content": "Donec eu tellus sed augue accumsan auctor ut eget risus.",
-          "title": "title"},
+          "title": "title 4"},
         {
           "content": "Phasellus id est a metus tempor dictum non at orci.",
-          "title": "title"},
+          "title": "title 5"},
         {
           "content": "Nullam congue ipsum eu sem tristique eleifend.",
-          "title": "title"
+          "title": "title 6"
         }
       ]
     },{
@@ -126,25 +126,25 @@
         0, 2
       ],
       "price":  150,
-     "specifications": [
+      "specifications": [
         {
           "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "title": "title"},
+          "title": "title 1"},
         {
           "content": "Sed hendrerit leo sed eros varius tincidunt.",
-          "title": "title"},
+          "title": "title 2"},
         {
           "content": "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
-          "title": "title"},
+          "title": "title 3"},
         {
           "content": "Donec eu tellus sed augue accumsan auctor ut eget risus.",
-          "title": "title"},
+          "title": "title 4"},
         {
           "content": "Phasellus id est a metus tempor dictum non at orci.",
-          "title": "title"},
+          "title": "title 5"},
         {
           "content": "Nullam congue ipsum eu sem tristique eleifend.",
-          "title": "title"
+          "title": "title 6"
         }
       ]
     },{
@@ -162,25 +162,25 @@
         0, 3
       ],
       "price":  150,
-     "specifications": [
+      "specifications": [
         {
           "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "title": "title"},
+          "title": "title 1"},
         {
           "content": "Sed hendrerit leo sed eros varius tincidunt.",
-          "title": "title"},
+          "title": "title 2"},
         {
           "content": "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
-          "title": "title"},
+          "title": "title 3"},
         {
           "content": "Donec eu tellus sed augue accumsan auctor ut eget risus.",
-          "title": "title"},
+          "title": "title 4"},
         {
           "content": "Phasellus id est a metus tempor dictum non at orci.",
-          "title": "title"},
+          "title": "title 5"},
         {
           "content": "Nullam congue ipsum eu sem tristique eleifend.",
-          "title": "title"
+          "title": "title 6"
         }
       ]
     },{
@@ -197,25 +197,25 @@
       "categories": [ 3
       ],
       "price":  150,
-     "specifications": [
+      "specifications": [
         {
           "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "title": "title"},
+          "title": "title 1"},
         {
           "content": "Sed hendrerit leo sed eros varius tincidunt.",
-          "title": "title"},
+          "title": "title 2"},
         {
           "content": "Fusce vel enim non urna congue rhoncus vitae vel nunc.",
-          "title": "title"},
+          "title": "title 3"},
         {
           "content": "Donec eu tellus sed augue accumsan auctor ut eget risus.",
-          "title": "title"},
+          "title": "title 4"},
         {
           "content": "Phasellus id est a metus tempor dictum non at orci.",
-          "title": "title"},
+          "title": "title 5"},
         {
           "content": "Nullam congue ipsum eu sem tristique eleifend.",
-          "title": "title"
+          "title": "title 6"
         }
       ]
     }
