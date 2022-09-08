@@ -1,9 +1,10 @@
 import {Link} from "react-router-dom";
-import {FaBootstrap, FaRegHeart, FaRegUser, FaShoppingCart} from "react-icons/all";
+import {FaBootstrap} from "react-icons/all";
 import { useState} from "react";
 import {motion} from "framer-motion"
 import {HeaderCategoriesComponent} from "./components/HeaderCategoriesComponent";
 import {SearchComponent} from "./components/SearchComponent";
+import {HeaderIconsComponent} from "./components/HeaderIconsComponent";
 export const HeaderComponent = () => {
     const [isCategoryDropdownOn, setIsCategoryDropdownOn] = useState<boolean>(false)
     return (
@@ -41,11 +42,7 @@ export const HeaderComponent = () => {
 
                     </div>
                     <SearchComponent />
-                    <div className="flex">
-                            <Link to="/wishlist" className="text-blue-100 hover:text-red-600 transition  p-2 font-medium"><FaRegHeart className={"text-3xl"}/></Link>
-                            <Link to="/cart" className="text-blue-100 hover:text-red-600 transition p-2 mx-2 "><FaShoppingCart className={"text-3xl"} /></Link>
-                            <Link to="/account" className="text-blue-100 hover:text-red-600 transition  p-2"><FaRegUser className={"text-3xl"} /></Link>
-                    </div>
+                    <HeaderIconsComponent />
                 </div>
 
             </nav>

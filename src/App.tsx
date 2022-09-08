@@ -4,16 +4,19 @@ import {HeaderComponent} from "./components/Header/HeaderComponent";
 import {AnimatedRoutes} from "./components/AnimatedRoutes";
 import {ProductsContextProvider} from "./context/ProductsContext";
 import {FooterComponent} from "./components/Footer/FooterComponent";
+import {AccountContextProvider} from "./context/AccountContext";
 
 const App:React.FC= () =>{
   return (
-  <ProductsContextProvider>
-      <BrowserRouter>
-          <HeaderComponent />
-          <AnimatedRoutes />
-          <FooterComponent/>
-      </BrowserRouter>
-  </ProductsContextProvider>
+      <AccountContextProvider>
+          <ProductsContextProvider>
+              <BrowserRouter>
+                  <HeaderComponent />
+                  <AnimatedRoutes />
+                  <FooterComponent/>
+              </BrowserRouter>
+          </ProductsContextProvider>
+      </AccountContextProvider>
   )
 }
 

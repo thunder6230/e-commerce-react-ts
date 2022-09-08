@@ -1,6 +1,6 @@
 import {Link, useParams} from "react-router-dom";
 import {motion} from "framer-motion";
-import {useContext, useEffect, useState} from "react";
+import {ChangeEvent, useContext, useEffect, useState} from "react";
 import {ProductsContext} from "../../context/ProductsContext";
 import {ProductSliderComponent} from "../../components/ProductSlider/ProductSliderComponent";
 import { FaPhotoVideo} from "react-icons/all";
@@ -16,6 +16,8 @@ export const ProductIndex = () => {
     const params = useParams()
     const {relatedProducts, getProduct, openedProduct} = useContext(ProductsContext)
     const [count, setCount] = useState<number>(1)
+    const [color, setColor] = useState<string>("")
+    const [size, setSize] = useState<string>("")
     const dropdownClass = "shadow-xl px-2 py-2 rounded focus:outline-none transition focus:border-blue-700 hover:border-blue-700 border-1 border-blue-300"
 
     useEffect(() => { getProduct && getProduct(params.id!)}, [])
@@ -46,9 +48,10 @@ export const ProductIndex = () => {
 
                                 <div className={"flex flex-col my-2"} style={{maxWidth:400}}>
                                     <label className={"font-semibold text-lg"}>Sizes</label>
-                                    <select className={dropdownClass}>
+                                    <select className={dropdownClass} onChange={(e: ChangeEvent<HTMLSelectElement>) => setSize(e.target.value)} value={size}>
+                                        <option value="">Please Select</option>
                                         { openedProduct.sizes.selection.map(size =>
-                                            <option value={size}>
+                                            <option value={size} key={size}>
                                                 {size} {openedProduct.sizes!.unit}
                                             </option>) }
                                     </select>
@@ -59,9 +62,10 @@ export const ProductIndex = () => {
 
                                 <div className={"flex flex-col my-2"} style={{maxWidth:400}}>
                                     <label className={"font-semibold text-lg"}>Colors</label>
-                                    <select className={dropdownClass}>
+                                    <select className={dropdownClass} onChange={(e: ChangeEvent<HTMLSelectElement>) => setColor(e.target.value)} value={color}>
+                                        <option value="">Please Select</option>
                                         { openedProduct.colors.map(color =>
-                                            <option value={color}>
+                                            <option value={color} key={color}>
                                                 {color}
                                             </option>) }
                                     </select>
@@ -69,15 +73,11 @@ export const ProductIndex = () => {
                                 </div>
                             }
                             <CounterComponent setCount={setCount} count={count} />
-                            <ProductToolsComponent />
+                            <ProductToolsComponent count={count} color={color} size={size} />
                             {
-                                openedProduct.categories &&
-                                <CategoryLinksComponent categoriesArr={openedProduct.categories} brand={openedProduct.brand}/>
-
-
+                                openedProduct.categories &&  <CategoryLinksComponent categoriesArr={openedProduct.categories} brand={openedProduct.brand}/>
                             }
                         </div>
-                        {/*{openedProduct.brand !== "" && <h3 className={"my-2 cursor-pointer font-semibold"} onClick={() => handleSearchBrand(openedProduct.brand)}>{openedProduct.brand}</h3>}*/}
                     </div>
                 </div>
                 <ProductDetailsComponent product={openedProduct}/>

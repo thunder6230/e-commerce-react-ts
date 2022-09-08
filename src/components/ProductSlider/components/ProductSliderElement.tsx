@@ -1,10 +1,11 @@
-import {FC, useState} from "react";
+import {FC, useContext, useState} from "react";
 import {IProduct} from "../../../GlobalTypes";
 import {FaCartPlus, FaHeart, FaPhotoVideo, FaSearchPlus} from "react-icons/all";
 import {motion} from "framer-motion"
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {HoverMenuIconElement} from "./HoverMenuIconElement";
 import {formatImage, formatPrice} from "../../../utilities/utilities";
+import {AccountContext} from "../../../context/AccountContext";
 
 interface Props {
     product: IProduct
@@ -13,7 +14,12 @@ interface Props {
 export const ProductSliderElement:FC<Props> = ({product}) => {
 
     const [showHoverMenu, setShowHoverMenu] = useState<boolean>(false)
-
+    const {addToWishList, addToCart} = useContext(AccountContext)
+    const navigate = useNavigate()
+    const handleAddToCart = () => {
+        if(product.sizes && product.colors) return navigate(`/product/${product.id}`)
+        addToCart && addToCart({product,  count: 1})
+    }
     return (
         <div
             className={"rounded p-3 h-full"}
@@ -40,8 +46,8 @@ export const ProductSliderElement:FC<Props> = ({product}) => {
                     }}
                     className={"bg-white bg-opacity-70 grid grid-rows-3 grid-flow-col h-full px-2 absolute right-0 top-0 gap-2 text-blue-700"}
                 >
-                        <HoverMenuIconElement callback={() => console.log("add to wishlist")} child={<FaHeart className={"h-8 w-8 m-auto"} />} />
-                        <HoverMenuIconElement callback={() => console.log("add to Cart")} child={<FaCartPlus className={"h-8 w-8 m-auto"} />} />
+                        <HoverMenuIconElement callback={() => addToWishList && addToWishList(product)} child={<FaHeart className={"h-8 w-8 m-auto"} />} />
+                        <HoverMenuIconElement callback={() => handleAddToCart()} child={<FaCartPlus className={"h-8 w-8 m-auto"} />} />
                         <HoverMenuIconElement callback={() => console.log("open quickview")} child={<FaSearchPlus className={"h-8 w-8 m-auto"} />} />
                 </motion.ul>
 

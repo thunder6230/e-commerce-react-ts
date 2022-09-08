@@ -22,7 +22,7 @@ export const CategoryLinksComponent: FC<Props> = ({categoriesArr,brand}) => {
         <div>
             {
                 categoriesArr.map(catId =>
-                    categories && <Link to={`/categories/${catId}`} className={linkClass}>{findCategoryName(catId)}</Link>
+                    categories && <Link to={`/categories/${catId}`} key={catId} className={linkClass}>{findCategoryName(catId)}</Link>
                 )
             }
             <Link to={`/search/brand/${brand}`} className={linkClass}>{brand}</Link>
