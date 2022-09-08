@@ -13,7 +13,7 @@ export const ProductToolsComponent:FC<Props> = ({count, size, color}) => {
     const {openedProduct} = useContext(ProductsContext)
     const handleAddToCart = async () => {
         const params:CartParams = {
-            id: openedProduct!.id,
+            product: openedProduct!,
             count,
             size: size !== "" ? size : undefined,
             color: color !== "" ? color : undefined,
@@ -28,7 +28,7 @@ export const ProductToolsComponent:FC<Props> = ({count, size, color}) => {
             {
                 addToWishList &&
                 <button className={btnClasses}
-                        onClick={() => addToWishList(openedProduct!.id)}>
+                        onClick={() => addToWishList(openedProduct!)}>
                     <FaRegHeart className={"text-xl mr-2"}/> Add To Wishlist
                 </button>
             }

@@ -20,7 +20,7 @@ export const SearchComponent = () => {
     }
     const navigate = useNavigate()
     const inputClasses = "px-4 py-1 text-lg rounded w-full transition focus:outline-none"
-    const searchIconDivClasses = "absolute right-0 top-1/2 -translate-y-1/2 p-2 cursor-pointer  hover:scale-125  transition"
+    const searchIconDivClasses = "absolute  top-1/2 -translate-y-1/2 p-2 cursor-pointer hover:scale-125 transition"
     const searchIconDivFocusClasses = 'border-1 border-blue-400 scale-125 -right-1 bg-white rounded-full hover:border-1 hover:border-blue-400 hover:scale-150'
 
     return (
@@ -35,7 +35,7 @@ export const SearchComponent = () => {
                            onBlur={() => setIsInputFocus(false)}
                            value={searchTerm}
                     />
-                    <button  className={`${searchIconDivClasses} ${isInputFocus ? searchIconDivFocusClasses : ''}`}>
+                    <button  className={`${isInputFocus ? searchIconDivFocusClasses : 'right-0'} ${searchIconDivClasses}`}>
                         <FaSearch className={`text-blue-900`}/>
                     </button>
 

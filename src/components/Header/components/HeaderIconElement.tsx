@@ -1,13 +1,17 @@
-import {FaRegHeart} from "react-icons/all";
 import {Link} from "react-router-dom";
 import {FC} from "react";
 
 interface Props {
-    children: JSX.Element | JSX.Element[],
+    children: JSX.Element | JSX.Element[]| undefined,
+    url: string
 }
 
-export const HeaderIconElement:FC<Props> = () => {
+export const HeaderIconElement:FC<Props> = ({children, url}) => {
     return (
-        <Link to="/wishlist" className="text-blue-100 hover:text-red-600 transition  p-2 font-medium"><FaRegHeart className={"text-3xl"}/></Link>
+        <div className={"mx-1 relative"}>
+            <Link to={url} className="text-blue-100 hover:text-red-600 transition inline-block p-2 relative">
+                {children}
+            </Link>
+        </div>
     )
 }

@@ -54,7 +54,7 @@ export interface ICartItem {
 }
 
 export interface CartParams {
-    id: string,
+    product: IProduct,
     count: number,
     color?: string,
     size?: string

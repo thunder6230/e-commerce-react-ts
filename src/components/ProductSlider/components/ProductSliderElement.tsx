@@ -18,7 +18,7 @@ export const ProductSliderElement:FC<Props> = ({product}) => {
     const navigate = useNavigate()
     const handleAddToCart = () => {
         if(product.sizes && product.colors) return navigate(`/product/${product.id}`)
-        addToCart && addToCart({id:product.id,  count: 1})
+        addToCart && addToCart({product,  count: 1})
     }
     return (
         <div
@@ -46,7 +46,7 @@ export const ProductSliderElement:FC<Props> = ({product}) => {
                     }}
                     className={"bg-white bg-opacity-70 grid grid-rows-3 grid-flow-col h-full px-2 absolute right-0 top-0 gap-2 text-blue-700"}
                 >
-                        <HoverMenuIconElement callback={() => addToWishList && addToWishList(product.id)} child={<FaHeart className={"h-8 w-8 m-auto"} />} />
+                        <HoverMenuIconElement callback={() => addToWishList && addToWishList(product)} child={<FaHeart className={"h-8 w-8 m-auto"} />} />
                         <HoverMenuIconElement callback={() => handleAddToCart()} child={<FaCartPlus className={"h-8 w-8 m-auto"} />} />
                         <HoverMenuIconElement callback={() => console.log("open quickview")} child={<FaSearchPlus className={"h-8 w-8 m-auto"} />} />
                 </motion.ul>

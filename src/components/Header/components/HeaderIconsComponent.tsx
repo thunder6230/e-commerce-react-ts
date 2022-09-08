@@ -1,37 +1,30 @@
 import {Link} from "react-router-dom";
 import {FaRegHeart, FaRegUser, FaShoppingCart} from "react-icons/all";
-import {useContext} from "react";
+import {useContext, useState} from "react";
 import {AccountContext} from "../../../context/AccountContext";
 import {HeaderIconCounterElement} from "./HeaderIconCounterElement";
 import {HeaderShoppingCartListComponent} from "./HeaderShoppingCartListComponent";
+import {HeaderIconElement} from "./HeaderIconElement";
 
 export const HeaderIconsComponent = () => {
-    const { cart, wishList} = useContext(AccountContext)
+    const { cartItems, wishList} = useContext(AccountContext)
+    const [showCartList, setCartShowList] = useState<boolean>(false)
     return (
-            <div className="flex">
-                <div className={"mx-1 relative"}>
-                    <Link to="/wishlist" className="text-blue-100 hover:text-red-600 transition inline-block p-2 relative">
+            <div className="flex relative">
+                <HeaderIconElement url="/wishlist">
                         <FaRegHeart className={"text-3xl"}/>
-                        {
-                            wishList && <HeaderIconCounterElement itemList={wishList} />
-                        }
-                    </Link>
-                </div>
-                <div className={"mx-1 relative"} >
-                    <Link to="/cart" className="text-blue-100 hover:text-red-600 transition inline-block p-2 relative">
+                         <HeaderIconCounterElement itemList={wishList!} />
+                </HeaderIconElement>
+                <div className={"mx-1 relative"} onMouseEnter={() => setCartShowList(true)} onMouseLeave={() => setCartShowList(false)}>
+                    <Link to={"/cart"} className="text-blue-100 hover:text-red-600 transition inline-block p-2 relative">
                         <FaShoppingCart className={"text-3xl"} />
-                        {
-                            cart && <HeaderIconCounterElement itemList={cart} />
-                        }
                     </Link>
-                    {
-                        cart && <HeaderShoppingCartListComponent cart={cart} />
-                    }
+                    <HeaderIconCounterElement itemList={cartItems!} />
+                    <HeaderShoppingCartListComponent cartItems={cartItems!} showCartList={showCartList}/>
                 </div>
-               <div className={"relative mx-1 "}>
-                <Link to="/account" className="text-blue-100 hover:text-red-600 transition inline-block p-2">
-                    <FaRegUser className={"text-3xl"} /></Link>
-               </div>
+                <HeaderIconElement url="/account">
+                    <FaRegUser className={"text-3xl"} />
+                </HeaderIconElement>
             </div>
     )
 }
