@@ -1,8 +1,10 @@
 import {FC, useEffect, useState} from "react";
 import {IProduct} from "../../GlobalTypes";
 import {ProductSliderElement} from "./components/ProductSliderElement";
-import Carousel from "better-react-carousel";
-
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Autoplay, Pagination} from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
 interface Props {
     products: IProduct[],
     title: string
@@ -21,19 +23,47 @@ export const ProductSliderComponent: FC<Props> = ({title, products}) => {
     useEffect(() => setTotalProducts(prevState => [...prevState].concat(products)), [])
     useEffect(() => prepareSlideSHowItems(), [totalProducts])
     return (
-        <div className={"shadow-md divide divide-gray-200 flex flex-col rounded"}>
+        <div className={"shadow-md divide divide-gray-200 rounded"}>
             <div className={"py-2 px-4 bg-blue-700 rounded-t"}>
                 <h2 className={" text-2xl font-semibold text-blue-100"}>{title}</h2>
             </div>
-            <Carousel gap={10} loop rows={1} cols={4} autoplay={5000} showDots>
+            <Swiper
+                slidesPerView={1}
+                spaceBetween={10}
+                pagination={{
+                    clickable: true,
+                }}
+                autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false
+                }}
+                modules={[Pagination, Autoplay]}
+                navigation={true}
+                loop={true}
+                breakpoints={{
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 50,
+                    },
+                }}
+                className={"px-2"}
+            style={{height:350}}>
                 {
-                       totalProducts.length > 11 && totalProducts.map((product) =>
-                        <Carousel.Item key={product.id}>
+                    totalProducts && totalProducts.map((product,index) =>
+                        <SwiperSlide key={product.id + index}>
                             <ProductSliderElement product={product} key={product.id}/>
-                        </Carousel.Item>)
+                        </SwiperSlide>)
 
                 }
-            </Carousel>
+            </Swiper>
         </div>
     )
 }

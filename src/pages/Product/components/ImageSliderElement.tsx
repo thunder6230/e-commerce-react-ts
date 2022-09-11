@@ -1,23 +1,49 @@
-import Carousel from "better-react-carousel";
 import {formatImage} from "../../../utilities/utilities";
 import {FC} from "react";
+import {Swiper, SwiperSlide}  from "swiper/react";
 
-interface Props{
+import "swiper/css";
+import "swiper/css/effect-cube";
+import "swiper/css/lazy";
+import "swiper/css/pagination";
+import {Autoplay, EffectCube, Lazy, Navigation, Pagination} from "swiper";
+interface Props {
     imgUrls: string[]
 }
-export const ImageSliderElement:FC<Props> = ({imgUrls}) => {
+
+export const ImageSliderElement: FC<Props> = ({imgUrls}) => {
+
     return (
-        <div className={""}>
-            {
-                    <Carousel gap={10} loop rows={1} autoplay={5000}  showDots scrollSnap>
-                        {
-                            imgUrls.map((url,index) =>
-                                <Carousel.Item key={url}>
-                                    <img src={formatImage(url)} alt={`Image ${index + 1}`} onClick={() => console.log("open fullscreen imggallery")}/>
-                                </Carousel.Item>)
-                        }
-                    </Carousel>
-            }
-        </div>
+        <Swiper
+            style={{height:350, width:400}}
+            effect={"cube"}
+            grabCursor={true}
+            autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+            }}
+            loop={true}
+            cubeEffect={{
+                shadow: true,
+                slideShadows: false,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+            }}
+            lazy={true}
+            pagination={{
+                clickable: true,
+            }}
+            navigation={true}
+            modules={[EffectCube, Pagination, Navigation, Autoplay, Lazy]}
+        >
+                {imgUrls.map((url, index) =>
+                    <SwiperSlide key={url} >
+                        <img data-src={formatImage(url)} alt={`Image ${index + 1}`} className={"swiper-lazy"}
+                             onClick={() => console.log("open fullscreen imggallery")}/>
+                    </SwiperSlide>)
+                }
+
+        </Swiper>
+
     )
 }
