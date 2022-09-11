@@ -1,11 +1,12 @@
 import {motion} from "framer-motion"
 import {Link} from "react-router-dom";
-import { formatPrice} from "../../utilities/utilities";
+import {formatPrice} from "../../utilities/utilities";
 import {useContext, useEffect} from "react";
 import {AccountContext} from "../../context/AccountContext";
 import {ProductsContext} from "../../context/ProductsContext";
 import {ProductSliderComponent} from "../../components/ProductSlider/ProductSliderComponent";
 import {CartListElement} from "./components/CartListElement";
+
 export const CartIndex = () => {
     const {cartItems, cartAmount} = useContext(AccountContext)
     const {topProducts, getTopProducts} = useContext(ProductsContext)

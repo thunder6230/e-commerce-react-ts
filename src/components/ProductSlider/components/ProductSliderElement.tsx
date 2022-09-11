@@ -46,9 +46,11 @@ export const ProductSliderElement:FC<Props> = ({product}) => {
                     }}
                     className={"bg-white bg-opacity-70 grid grid-rows-3 grid-flow-col h-full px-2 absolute right-0 top-0 gap-2 text-blue-700"}
                 >
-                        <HoverMenuIconElement callback={() => addToWishList && addToWishList(product)} child={<FaHeart className={"h-8 w-8 m-auto"} />} />
-                        <HoverMenuIconElement callback={() => handleAddToCart()} child={<FaCartPlus className={"h-8 w-8 m-auto"} />} />
-                        <HoverMenuIconElement callback={() => console.log("open quickview")} child={<FaSearchPlus className={"h-8 w-8 m-auto"} />} />
+
+                            <HoverMenuIconElement callback={() => addToWishList && addToWishList(product)} child={<FaHeart className={"h-8 w-8 m-auto"} />} />
+                            <HoverMenuIconElement callback={() => handleAddToCart()} child={<FaCartPlus className={"h-8 w-8 m-auto"} />} />
+                            <HoverMenuIconElement callback={() => console.log("open quickview")} child={<FaSearchPlus className={"h-8 w-8 m-auto"} />} />
+
                 </motion.ul>
 
 

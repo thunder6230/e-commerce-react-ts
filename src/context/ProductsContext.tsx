@@ -41,7 +41,6 @@ export const ProductsContextProvider: FC<Props> = ({children}) => {
         if (response.status != 200) return //errorHandling
         setOpenedProduct(response.data)
     }
-
     const searchProducts = async (searchParams: ISearchParams) => {
         interface ISearchRequestParams {
             name_like?: string,

@@ -1,6 +1,6 @@
-import {FaSearch} from "react-icons/all";
 import {ChangeEvent, FormEvent, useState} from "react";
 import {useNavigate} from "react-router-dom";
+import {FaSearch} from "react-icons/all";
 
 export const SearchComponent = () => {
     const [isInputFocus, setIsInputFocus] = useState<boolean>(false)

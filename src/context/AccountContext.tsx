@@ -1,10 +1,12 @@
 import {createContext, FC, useEffect, useState} from "react";
-import {CartParams, ICartItem, IProduct, IUser} from "../GlobalTypes";
+import {CartParams, ICartItem, ILoginParams, IProduct, IRegisterParams, IUser} from "../GlobalTypes";
+import axios from "axios";
 interface IAccountContext{
-    userLoggedIn: IUser ,
+    userLoggedIn: IUser | null ,
     wishList: IProduct[],
     cartItems: ICartItem[],
     cartAmount: number,
+    loginErrorMessage: string,
     addToCart: (params:CartParams) => void
     addToWishList: (product: IProduct) => void
     removeFromWishList: (product: IProduct) => void
@@ -12,18 +14,33 @@ interface IAccountContext{
     incrementCartItem: (cartItem: ICartItem) => void
     decrementCartItem: (cartItem: ICartItem) => void
     setCountCartItem: (cartItem: ICartItem, count:number) => void
+    login: (loginParams: ILoginParams) => void
+    register: (registerParams: IRegisterParams) => void
 }
 export const AccountContext = createContext<Partial<IAccountContext>>({})
 interface Props{
     children: JSX.Element | JSX.Element[],
 }
+
+
 export const AccountContextProvider:FC<Props> = ({children}) => {
-    const [userLoggedIn, setUserLoggedIn] = useState<IUser>({})
+    const [userLoggedIn, setUserLoggedIn] = useState<IUser | null>(null)
     const [wishList, setWishList] = useState<IProduct[]>([])
     const [cartItems, setCartItems] = useState<ICartItem[]>([])
     const [cartAmount, setCartAmount] = useState<number>(0)
+    const [loginErrorMessage, setLoginErrorMessage] = useState<string>("")
+    const login = async (loginParams: ILoginParams) => {
+        setLoginErrorMessage("")
+        const response = await axios.get(`/users`, {params: {email:loginParams.email}})
+        const user = response.data[0]
+       if(response.data.length === 0) return setLoginErrorMessage("This user doesn't exist")
+       if(user.password !== loginParams.password) return setLoginErrorMessage("Invalid password")
+       setUserLoggedIn(user)
+    }
+    const register = (registerParams: IRegisterParams) => {
+        console.log(registerParams)
+    }
     const addToCart = async (params:CartParams) => {
-
         const newCartItem:ICartItem = {
             product: params.product,
             count: params.count,
@@ -100,8 +117,11 @@ export const AccountContextProvider:FC<Props> = ({children}) => {
             return prevState.filter(item => item !== product)
         })
     }
+    const contextValues = {
+        userLoggedIn,wishList, cartItems,cartAmount,loginErrorMessage, addToCart, addToWishList, removeFromWishList, removeFromCart, incrementCartItem, decrementCartItem, setCountCartItem, login, register
+    }
     useEffect(() => getCartAmount(), [cartItems])
-    return <AccountContext.Provider value={{userLoggedIn,wishList, cartItems,cartAmount, addToCart, addToWishList, removeFromWishList, removeFromCart, incrementCartItem, decrementCartItem, setCountCartItem}}>
+    return <AccountContext.Provider value={contextValues}>
         {children}
     </AccountContext.Provider>
 }

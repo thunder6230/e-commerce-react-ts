@@ -1,6 +1,6 @@
 import {motion} from "framer-motion";
 import {FC, useEffect, useState} from "react";
-import {ICartItem, IProduct} from "../../../GlobalTypes";
+import {ICartItem, IProduct} from "../../../../GlobalTypes";
 interface Props{
     itemList: IProduct[] | ICartItem[]
 }

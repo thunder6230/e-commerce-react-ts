@@ -1,9 +1,9 @@
-import {motion} from "framer-motion"
 import {BannerComponent} from "../../components/Banner/BannerComponent";
 import {IImg} from "../../GlobalTypes";
-import {useContext, useEffect} from "react";
+import {Fragment, useContext, useEffect} from "react";
 import {ProductsContext} from "../../context/ProductsContext";
 import {ProductSliderComponent} from "../../components/ProductSlider/ProductSliderComponent";
+import {MotionPage} from "../../components/Utilities/MotionPage";
 
 export const HomeIndex = () => {
     const {topProducts, getTopProducts} = useContext(ProductsContext)
@@ -23,19 +23,18 @@ export const HomeIndex = () => {
 
     useEffect(() => {getTopProducts && getTopProducts()}, [])
     return (
-        <motion.div
-            initial={{opacity: 0, translateX: -30}}
-            animate={{opacity: 1, translateX: 0, position: "absolute", transitionEnd:{position:"unset"} }}
-            exit={{opacity: 0, translateX: -30}}
-            className={"w-full flex flex-col py-16 pageComponent"}
-        >
+        <MotionPage>
             <BannerComponent images={images} />
-            {topProducts &&
-                <div className={"container m-auto my-8 "}>
-                    <ProductSliderComponent products={topProducts} title="Top Products" />
-                </div>
-            }
+           <Fragment>
+                {topProducts &&
+                    <div className={"container m-auto my-8 "}>
+                        <ProductSliderComponent products={topProducts} title="Top Products" />
+                    </div>
+                }
+           </Fragment>
 
-        </motion.div>
+            </MotionPage>
+
+        // </motion.div>
     )
 }

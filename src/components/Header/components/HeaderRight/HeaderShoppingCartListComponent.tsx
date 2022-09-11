@@ -1,9 +1,9 @@
 import {motion} from "framer-motion";
 import {FC, useContext} from "react";
-import {ICartItem} from "../../../GlobalTypes";
-import {formatImage, formatPrice} from "../../../utilities/utilities";
+import {ICartItem} from "../../../../GlobalTypes";
+import {formatImage, formatPrice} from "../../../../utilities/utilities";
 import {FaPhotoVideo, FaTimes} from "react-icons/all";
-import {AccountContext} from "../../../context/AccountContext";
+import {AccountContext} from "../../../../context/AccountContext";
 import {Link} from "react-router-dom";
 interface Props{
     cartItems: ICartItem[],

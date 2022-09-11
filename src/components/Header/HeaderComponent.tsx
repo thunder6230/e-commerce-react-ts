@@ -4,7 +4,7 @@ import { useState} from "react";
 import {motion} from "framer-motion"
 import {HeaderCategoriesComponent} from "./components/HeaderCategoriesComponent";
 import {SearchComponent} from "./components/SearchComponent";
-import {HeaderIconsComponent} from "./components/HeaderIconsComponent";
+import {HeaderIconsComponent} from "./components/HeaderRight/HeaderIconsComponent";
 export const HeaderComponent = () => {
     const [isCategoryDropdownOn, setIsCategoryDropdownOn] = useState<boolean>(false)
     return (

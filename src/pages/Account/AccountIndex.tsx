@@ -1,11 +1,10 @@
-import {motion} from "framer-motion"
+import {MotionPage} from "../../components/Utilities/MotionPage";
 export const AccountIndex = () => {
     return (
-        <motion.div
-            initial={{opacity: 0, translateX: -30}}
-            animate={{opacity: 1, translateX: 0, position: "absolute",transitionEnd:{position:"unset"} }}
-            exit={{opacity: 0, translateX: -30}}
-            className={"py-16 pageComponent"}
-        >Account</motion.div>
+        <MotionPage>
+            <div className={"w-full flex flex-col py-16 pageComponent"}>
+                Account
+            </div>
+        </MotionPage>
     )
 }
